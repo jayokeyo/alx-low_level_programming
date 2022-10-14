@@ -1,0 +1,11 @@
+#include <stdio.h>
+/**
+ * main - Entry point into the program.
+ * Return: Always 0 (Success)
+ */
+
+int main (void)
+{
+	printf("with proper grammar, but the outcom is a piece of art,");
+	return (0);
+}
