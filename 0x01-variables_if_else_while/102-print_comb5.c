@@ -13,11 +13,13 @@ int main(void)
 	int num3;
 	int num4;
 
-	for (num1 = 0; num1 <= 6; num1++)
+	for (num1 = 0; num1 <= 98; num1++)
 	{
-		for (num2 = 0; num2 <= 8; num2++)
+		for (num2 = 0; num2 <= 99; num2++)
 		{
-			for (num3 = 0; num3 <= 9; num3++)
+			putchar(num1 + '0');
+			putchar(num2 + '0');
+			/*for (num3 = 0; num3 <= 9; num3++)
 			{
 				for (num4 = 1; num4 <= 9; num4++)
 				{
@@ -37,6 +39,7 @@ int main(void)
 					}
 				}
 			}
+			*/
 		}
 	}
 	return (0);
