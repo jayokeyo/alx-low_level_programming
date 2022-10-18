@@ -12,7 +12,7 @@ int main(void)
 	while (*c)
 	{
 		_putchar(*c);
-		*c++;
+		c++;
 	}
 	return (0);
 }
