@@ -16,5 +16,5 @@ int _islower(int c)
 		else
 			ctrl = 0;
 	}
-	return (ctrl)
+	return (ctrl);
 }
