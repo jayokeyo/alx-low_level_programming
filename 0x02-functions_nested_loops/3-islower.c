@@ -11,7 +11,7 @@ int _islower(int c)
 
 	for (alpha = 'a'; alpha <= 'z'; alpha++)
 	{
-		if (alpha == c)
+		if (alpha == (char)c)
 			ctrl = 1;
 		else
 			ctrl = 0;
