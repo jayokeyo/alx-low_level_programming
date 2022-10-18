@@ -7,12 +7,14 @@
 int _islower(int c)
 {
 	char alpha;
+	int ctrl;
 
 	for (alpha = 'a'; alpha <= 'z'; alpha++)
 	{
 		if (alpha == c)
-			return (1);
+			ctrl = 1;
 		else
-			return (0);
+			ctrl = 0;
 	}
+	return (ctrl)
 }
