@@ -6,7 +6,7 @@
 int main(void)
 {
 	long int fib = 1;
-	long int b = 1;
+	long int b = 0;
 	long int a = 0;
 	int c;
 
