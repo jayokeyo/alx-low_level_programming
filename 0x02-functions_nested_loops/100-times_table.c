@@ -43,6 +43,8 @@ void print_times_table(int n)
 						_putchar((((num1 * num2) % 100) % 10) + '0');
 						_putchar(',');
 						_putchar(' ');
+					}
+				}
 			}
 			if ((num1 * n) <= 9)
 			{
@@ -51,6 +53,7 @@ void print_times_table(int n)
 				_putchar((num1 * n) + '0');
 			}
 			else
+			{
 				if ((num1 * n) <= 99)
 				{
 					_putchar(' ');
@@ -63,6 +66,7 @@ void print_times_table(int n)
 					_putchar(((num1 * n) % 100) / 10 + '0');
 					_putchar(((num1 * n) % 100) % 10 + '0');
 				}
+			}
 			_putchar('\n');
 		}
 	}
