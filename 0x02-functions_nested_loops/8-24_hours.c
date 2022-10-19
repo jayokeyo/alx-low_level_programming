@@ -3,7 +3,7 @@
  * jack_bauer - Prints the time of the day
  * Return: Always 0 (Success)
  */
-void jac_bauer(void)
+void jack_bauer(void)
 {
 	int hour, minute;
 
