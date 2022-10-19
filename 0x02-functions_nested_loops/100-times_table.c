@@ -18,9 +18,9 @@ void print_times_table(int n)
 			{
 				if ((num1 * num2) <= 9)
 					printf("  %d, ", (num1 * num2));
-				else
+				else 
 				{
-					if((num1 * num2) <= 99)
+					if ((num1 * num2) <= 99)
 						printf(" %d, ", (num1 * num2));
 					else
 						printf("%d, ", (num1 * num2));
