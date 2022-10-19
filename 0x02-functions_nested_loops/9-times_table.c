@@ -13,9 +13,9 @@ void times_table(void)
 		{
 			if ((num1 * num2) <= 9)
 			{
+				_putchar(' ')
 				_putchar((num1 * num2) + '0');
 				_putchar(',');
-				_putchar(' ');
 				_putchar(' ');
 			}
 			else
