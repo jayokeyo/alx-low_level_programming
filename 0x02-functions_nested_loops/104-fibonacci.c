@@ -17,6 +17,6 @@ int main(void)
 		fib = a + b;
 		printf("%ld, ", fib);
 	}
-	printf("%ld\n", (fib + b));
+	printf("%ld", (fib + b));
 	return (0);
 }
