@@ -6,11 +6,14 @@
  */
 int print_last_digit(int n)
 {
-	unsigned int mod;
+	int mod;
+	unsigned int num;
 
 	if (n < 0)
-		n *= -1;
-	mod = n % 10;
+		num = n * (-1);
+	else
+		num = n;
+	mod = num % 10;
 	_putchar(mod + '0');
 	return (mod);
 }
