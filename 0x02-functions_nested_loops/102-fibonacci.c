@@ -10,7 +10,6 @@ int main(void)
 	int b = 0;
 	int a = 0;
 
-	printf("%d, ", sum);
 	for (c = 1; c < 50; c++)
 	{
 		a = b;
@@ -18,5 +17,6 @@ int main(void)
 		sum = a + b;
 		printf("%d, ", sum);
 	}
+	printf("%d\n", (sum + b));
 	return (0);
 }
