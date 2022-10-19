@@ -29,11 +29,11 @@ void times_table(void)
 		if ((num1 * 9) < 9)
 		{
 			_putchar(' ');
-			_putchar(num1 * 9);
+			_putchar((num1 * 9) + '0');
 		}
 		else
 		{
-			_putchar(num1 * 9);
+			_putchar((num1 * 9) + '0');
 		}
 		_putchar('\n');
 	}
