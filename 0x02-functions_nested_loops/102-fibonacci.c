@@ -18,5 +18,6 @@ int main(void)
 		sum = a + b;
 		printf("%d, ", sum);
 	}
+	return (0);
 }
 }
