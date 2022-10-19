@@ -9,7 +9,7 @@ void times_table(void)
 
 	for (num1 = 0; num1 <= 9; num1++)
 	{
-		for (num2 = 0; num2 <= 9; num2++)
+		for (num2 = 0; num2 < 9; num2++)
 		{
 			if ((num1 * num2) <= 9)
 			{
@@ -25,6 +25,15 @@ void times_table(void)
 				_putchar(',');
 				_putchar(' ');
 			}
+		}
+		if ((num1 * 9) < 9)
+		{
+			_putchar(' ');
+			_putchar(num1 * 9);
+		}
+		else
+		{
+			_putchar(num1 * 9);
 		}
 		_putchar('\n');
 	}
