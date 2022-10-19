@@ -6,7 +6,7 @@
  */
 int print_last_digit(int n)
 {
-	int mod;
+	unsigned int mod;
 
 	if (n < 0)
 		n *= -1;
