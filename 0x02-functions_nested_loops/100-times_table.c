@@ -21,28 +21,48 @@ void print_times_table(int n)
 				if ((num1 * num2) <= 9)
 				{
 					_putchar(' ');
+					_putchar(' ');
 					_putchar((num1 * num2) + '0');
 					_putchar(',');
 					_putchar(' ');
 				}
 				else
 				{
-					_putchar((num1 * num2) / 10 + '0');
-					_putchar((num1 * num2) % 10 + '0');
-					_putchar(',');
-					_putchar(' ');
-				}
+					if ((num1 * num2) <= 99)
+					{
+						_putchar(' ');
+						_putchar((num1 * num2) / 10 + '0');
+						_putchar((num1 * num2) % 10 + '0');
+						_putchar(',');
+						_putchar(' ');
+					}
+					else
+					{
+						_putchar((num1 * num2) / 100 + '0');
+						_putchar(((num1 * num2) % 100) / 10 + '0');
+						_putchar((((num1 * num2) % 100) % 10) + '0');
+						_putchar(',');
+						_putchar(' ');
 			}
 			if ((num1 * n) <= 9)
 			{
 				_putchar(' ');
+				_putchar(' ');
 				_putchar((num1 * n) + '0');
 			}
 			else
-			{
-				_putchar((num1 * n) / 10 + '0');
-				_putchar((num1 * n) % 10 + '0');
-			}
+				if ((num1 * n) <= 99)
+				{
+					_putchar(' ');
+					_putchar((num1 * n) / 10 + '0');
+					_putchar((num1 * n) % 10 + '0');
+				}
+				else
+				{
+					_putchar((num1 * n) / 100 + '0');
+					_putchar(((num1 * n) % 100) / 10 + '0');
+					_putchar(((num1 * n) % 100) % 10 + '0');
+				}
 			_putchar('\n');
 		}
 	}
