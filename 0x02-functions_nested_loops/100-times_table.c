@@ -18,17 +18,22 @@ void print_times_table(int n)
 			{
 				if ((num1 * num2) <= 9)
 					printf("  %d, ", (num1 * num2));
-				if ((num1 * num2) <= 99)
-					printf(" %d, ", (num1 * num2));
-				if ((num1 * num2) > 99)
-					printf("%d, ", (num1 * num2));
+				else
+				{
+					if((num1 * num2) <= 99)
+						printf(" %d, ", (num1 * num2));
+					else
+						printf("%d, ", (num1 * num2));
+				}
 			}
 			if ((num1 * n) <= 9)
 				printf("  %d", (num1 * n));
-			if ((num1 * n) <= 99)
-				printf(" %d", (num1 * n));
-			if ((num1 * n) > 99)
-				printf("%d", (num1 * n));
+			else
+			{
+				if ((num1 * n) <= 99)
+					printf(" %d", (num1 * n));
+				else
+					printf("%d", (num1 * n));
 			printf("\n");
 		}
 	}
