@@ -15,8 +15,8 @@ int main(void)
 		a = b;
 		b = sum;
 		sum = a + b;
-		printf("%d, ", sum);
+		printf("%ld, ", sum);
 	}
-	printf("%d\n", (sum + b));
+	printf("%ld\n", (sum + b));
 	return (0);
 }
