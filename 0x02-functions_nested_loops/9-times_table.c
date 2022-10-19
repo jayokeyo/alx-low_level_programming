@@ -21,7 +21,7 @@ void times_table(void)
 			else
 			{
 				_putchar((num1 * num2) / 10 + '0');
-				_putchar((num1 + num2) % 10 + '0');
+				_putchar((num1 * num2) % 10 + '0');
 				_putchar(',');
 				_putchar(' ');
 			}
