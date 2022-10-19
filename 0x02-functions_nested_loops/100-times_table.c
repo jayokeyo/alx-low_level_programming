@@ -13,8 +13,7 @@ void print_times_table(int n)
 	{
 		for (num1 = 0; num1 <= n; num1++)
 		{
-			printf("%d, ", 0);
-			for (num2 = 1; num2 < n; num2++)
+			for (num2 = 0; num2 < n; num2++)
 			{
 				if ((num1 * num2) <= 9)
 				{
@@ -47,7 +46,7 @@ void print_times_table(int n)
 					printf("%d", (num1 * n));
 				}
 			}
-			_putchar('\n');
+			printf('\n');
 		}
 	}
 }
