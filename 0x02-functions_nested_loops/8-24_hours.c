@@ -19,5 +19,4 @@ void jac_bauer(void)
 			_putchar('\n');
 		}
 	}
-	return (0);
 }
