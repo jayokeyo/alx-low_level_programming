@@ -34,6 +34,7 @@ void print_times_table(int n)
 					printf(" %d", (num1 * n));
 				else
 					printf("%d", (num1 * n));
+			}
 			printf("\n");
 		}
 	}
