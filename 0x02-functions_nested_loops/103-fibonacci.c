@@ -16,10 +16,8 @@ int main(void)
 		b = fib;
 		fib = a + b;
 		if (fib % 2 == 0)
-		{
 			sum += fib;
-			printf("%ld\n", sum);
-		}
+		printf("%ld\n", sum);
 	}
 	return (0);
 }
