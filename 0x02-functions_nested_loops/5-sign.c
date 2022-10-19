@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_sign: Prints the sign of an integer (+, 0, or -)
+ * print_sign - Prints the sign of an integer (+, 0, or -)
  * @n: Integer input to the function
  * Return: Always 0 (Success)
  */
