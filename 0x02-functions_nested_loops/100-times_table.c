@@ -14,59 +14,37 @@ void print_times_table(int n)
 		for (num1 = 0; num1 <= n; num1++)
 		{
 			printf("%d, ", 0);
-			/* _putchar(0 + '0');
-			 * _putchar(',');
-			 * _putchar(' ');
-			 */
 			for (num2 = 1; num2 < n; num2++)
 			{
 				if ((num1 * num2) <= 9)
 				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar((num1 * num2) + '0');
-					_putchar(',');
-					_putchar(' ');
+					printf("  %d, ", (num1 * num2));
 				}
 				else
 				{
 					if ((num1 * num2) <= 99)
 					{
-						_putchar(' ');
-						_putchar((num1 * num2) / 10 + '0');
-						_putchar((num1 * num2) % 10 + '0');
-						_putchar(',');
-						_putchar(' ');
+						printf(" %d, ", (num1 * num2));
 					}
 					else
 					{
-						_putchar((num1 * num2) / 100 + '0');
-						_putchar(((num1 * num2) % 100) / 10 + '0');
-						_putchar((((num1 * num2) % 100) % 10) + '0');
-						_putchar(',');
-						_putchar(' ');
+						printf("%d, ", (num1 * num2));
 					}
 				}
 			}
 			if ((num1 * n) <= 9)
 			{
-				_putchar(' ');
-				_putchar(' ');
-				_putchar((num1 * n) + '0');
+				printf("  %d", (num1 * n));
 			}
 			else
 			{
 				if ((num1 * n) <= 99)
 				{
-					_putchar(' ');
-					_putchar((num1 * n) / 10 + '0');
-					_putchar((num1 * n) % 10 + '0');
+					printf(" %d", (num1 * n));
 				}
 				else
 				{
-					_putchar((num1 * n) / 100 + '0');
-					_putchar(((num1 * n) % 100) / 10 + '0');
-					_putchar(((num1 * n) % 100) % 10 + '0');
+					printf("%d", (num1 * n));
 				}
 			}
 			_putchar('\n');
