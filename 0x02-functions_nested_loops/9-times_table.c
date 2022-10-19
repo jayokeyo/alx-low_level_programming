@@ -26,7 +26,7 @@ void times_table(void)
 				_putchar(' ');
 			}
 		}
-		if ((num1 * 9) < 9)
+		if ((num1 * 9) <= 9)
 		{
 			_putchar(' ');
 			_putchar((num1 * 9) + '0');
