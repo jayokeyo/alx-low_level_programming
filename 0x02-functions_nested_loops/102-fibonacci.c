@@ -5,10 +5,10 @@
  */
 int main(void)
 {
-	unsigned int c;
-	unsigned int sum = 1;
-	unsigned int b = 0;
-	unsigned int a = 0;
+	long long int c;
+	long long int sum = 1;
+	long long int b = 0;
+	long long int a = 0;
 
 	for (c = 1; c < 50; c++)
 	{
