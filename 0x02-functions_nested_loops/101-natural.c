@@ -1,6 +1,5 @@
 #include <stdio.h>
-/*
- * main - Entry point
+/* main - Entry point
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -13,6 +12,6 @@ int main(void)
 		if ((num % 3 == 0) || (num % 5 == 0))
 			sum += num;
 	}
-	printf("%d",sum);
+	printf("%d\n", sum);
 	return (0);
 }
