@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 /**
  * mul - finds the product of two numbers
  * @a: First integer input
@@ -7,5 +7,5 @@
  */
 int mul(int a, int b)
 {
-	return ((int)a * (int)b);
+	return (a * b);
 }
