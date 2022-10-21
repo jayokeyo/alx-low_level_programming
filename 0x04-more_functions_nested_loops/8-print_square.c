@@ -6,6 +6,7 @@
 void print_square(int size)
 {
 	int c;
+	int d;
 
 	if (size <= 0)
 		_putchar('\n');
@@ -13,10 +14,9 @@ void print_square(int size)
 	{
 		for (c = 0; c < size; c++)
 		{
-			_putchar("#");
-			for (c = 1; c < size; c++)
+			for (d = 0; d < size; d++)
 			{
-				_putchar("#");
+				_putchar('#');
 			}
 			_putchar('\n');
 		}
