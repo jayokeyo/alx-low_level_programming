@@ -13,7 +13,8 @@ int main(void)
 
 	i = 0;
 
-	/* while (i < 10)
+	/* i is always o so loop will never terminate.
+	 * while (i < 10)
 	{
 		putchar(i);
 	} */
