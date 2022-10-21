@@ -7,6 +7,7 @@ void print_diagonal(int n)
 {
 	int d = 1;
 	int c;
+	int e;
 
 	if (n <= 0)
 		_putchar('\n');
@@ -21,10 +22,10 @@ void print_diagonal(int n)
 			_putchar('\n');
 			for (c = 1; c < n; c++)
 			{
-				for (c = 0; c < n; c++)
+				for (e = 0; e < n; e++)
 				{
 					_putchar(' ');
-					if (c == d);
+					if (e == d);
 					{
 						_putchar('\\');
 						_putchar('\n');
