@@ -6,9 +6,11 @@
 void more_numbers(void)
 {
 	int c;
+	int h;
+	int t;
+	int o;
 
-	_putchar(0 + '0');
-	for (c = 1; c <= 14; c++)
+	for (c = 0; c <= 14; c++)
 	{
 		h = (c * 10) / 100;
 		t = ((c * 10) % 100) / 10;
