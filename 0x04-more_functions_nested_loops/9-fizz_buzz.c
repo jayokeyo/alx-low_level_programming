@@ -24,6 +24,6 @@ int main(void)
 			}
 		}
 	}
-	printf("FizzBuzz");
+	printf("Buzz");
 	return (0);
 }
