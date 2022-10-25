@@ -1,4 +1,4 @@
-@include "main.h"
+#include "main.h"
 /**
  * _atoi - scans through a string and converts it to string
  * @s: string input
