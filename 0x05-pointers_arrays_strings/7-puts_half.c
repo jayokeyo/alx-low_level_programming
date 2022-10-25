@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 /**
  * puts_half - prints the second half of an input string
  * @str: string input to the function
