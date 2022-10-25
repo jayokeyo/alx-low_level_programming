@@ -15,5 +15,5 @@ void rev_string(char *s)
 		rev[j] = s[i];
 		j++;
 	}
-	return (*rev);
+	*s = rev*;
 }
