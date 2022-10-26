@@ -7,9 +7,10 @@
  * @len: Length of password
  * Return: Generated password
  */
-int main(int len)
+int main(void)
 {
 	int c = 0;
+	int len = 5;
 	char randChar;
 	
 	while (c < len)
