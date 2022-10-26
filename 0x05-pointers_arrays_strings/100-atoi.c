@@ -7,9 +7,10 @@
 int _atoi(char *s)
 {
 	int a, j = 0;
-	int *ns1, *ns2;
+	char* ns1;
+	char* ns2;
 
-	*ns1 = '+';
+	ns1[0] = '+';
 
 	for (a = 0; s[a] != '\0'; a++)
 	{
@@ -32,12 +33,12 @@ int _atoi(char *s)
 		}
 	}
 	if (ns1[1] != '\0' && ns1[0] == '-')
-		return (*ns1);
+		return ((int)ns1);
 	if (ns1[1] != '\0' && ns1[0] == '+')
 	{
 		for (a = 1; ns1[a] != '\0'; a++)
-			*ns2 = ns1[a];
-		return (*ns2);
+			ns2[0] = ns1[a];
+		return ((int)ns2);
 	}
 	if (ns1[1] == '\0')
 		return (0);
