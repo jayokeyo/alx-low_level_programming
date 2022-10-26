@@ -33,12 +33,12 @@ int _atoi(char *s)
 		}
 	}
 	if (ns1[1] != '\0' && ns1[0] == '-')
-		return (ns1);
+		return (*ns1);
 	if (ns1[1] != '\0' && ns1[0] == '+')
 	{
 		for (a = 1; ns1[a] != '\0'; a++)
 			ns2[0] = ns1[a];
-		return (ns2);
+		return (*ns2);
 	}
 	if (ns1[1] == '\0')
 		return (0);
