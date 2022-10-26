@@ -32,12 +32,12 @@ int _atoi(char *s)
 		}
 	}
 	if (ns1[1] != '\0' && ns1[0] == '-')
-		return ((int)ns1);
+		return ((long int)ns1);
 	if (ns1[1] != '\0' && ns1[0] == '+')
 	{
 		for (a = 1; ns1[a] != '\0'; a++)
 			ns2[a - 1] = ns1[a];
-		return ((int)ns2);
+		return ((long int)ns2);
 	}
 	if (ns1[1] == '\0')
 		return (0);
