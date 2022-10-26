@@ -7,7 +7,7 @@
 int _atoi(char *s)
 {
 	int a, j = 0;
-	int ns1[150], ns2[150];
+	int *ns1, *ns2;
 
 	ns1[0] = '+';
 
