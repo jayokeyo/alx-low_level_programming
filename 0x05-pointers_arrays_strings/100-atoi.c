@@ -41,4 +41,5 @@ int _atoi(char *s)
 	}
 	if (ns1[1] == '\0')
 		return (0);
+	return (0);
 }
