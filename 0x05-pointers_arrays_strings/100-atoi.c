@@ -7,7 +7,7 @@
 int _atoi(char *s)
 {
 	int a, j = 0;
-	char ns1[150], ns2[150];
+	int ns1[150], ns2[150];
 
 	ns1[0] = '+';
 
@@ -32,12 +32,12 @@ int _atoi(char *s)
 		}
 	}
 	if (ns1[1] != '\0' && ns1[0] == '-')
-		return ((long long int)ns1);
+		return (ns1);
 	if (ns1[1] != '\0' && ns1[0] == '+')
 	{
 		for (a = 1; ns1[a] != '\0'; a++)
 			ns2[a - 1] = ns1[a];
-		return ((long long int)ns2);
+		return (ns2);
 	}
 	if (ns1[1] == '\0')
 		return (0);
