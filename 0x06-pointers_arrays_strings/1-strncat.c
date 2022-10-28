@@ -17,5 +17,6 @@ char *_strncat(char *dest, char *src, int n)
 			break;
 		dest[a] = src[a - len];
 	}
+
 	return (dest);
 }
