@@ -13,8 +13,8 @@ int _strcmp(char *s1, char *s2)
 		len1++;
 	for (a = 0; s2[a] != '\0'; a++)
 		len2++;
-	if (len1 == 0 || len2 == 0)
-		r = 0;
+	/*if (len1 == 0 || len2 == 0)
+		r = 0;*/
 	if (len1 >= len2 && len2 != 0)
 	{
 		for (a = 0; s1[a] != '\0'; a++)
