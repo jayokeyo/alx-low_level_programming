@@ -3,6 +3,7 @@
  * _strcat - contactenate a source string to a destination string
  * @src: source string
  * @dest: destination string
+ *
  * Return: dest (Pointer to the destination string)
  */
 char* _strcat(char *dest, char *src)
