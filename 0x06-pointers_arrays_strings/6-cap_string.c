@@ -4,11 +4,11 @@
  * @s: input string
  * Return: capitalized string
  */
-char *cap_string(char *s)
+char *cap_string(char *str)
 {
 	int index = 0;
 
-	while (s[index])
+	while (str[index])
 	{
 		if (str[index - 1] == ' ' ||
 		    str[index - 1] == '\t' ||
@@ -24,8 +24,8 @@ char *cap_string(char *s)
 		    str[index - 1] == '{' ||
 		    str[index - 1] == '}' ||
 		    str[index - 1] == 0)
-			s[index] -= 32;
+			str[index] -= 32;
 		index++;
 	}
-	return (s);
+	return (str);
 }
