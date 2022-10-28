@@ -30,5 +30,21 @@ int _strcmp(char *s1, char *s2)
 			}
 		}
 	}
+	if (len2 > len1)
+	{
+		for (a = 0; s2[a] != '\0'; a++)
+		{
+			if (s2[a] == s1[a])
+			{
+				r = 0;
+				continue;
+			}
+			else
+			{
+				r = s2[a] - s1[a];
+				break;
+			}
+		}
+	}
 	return (r);
 }
