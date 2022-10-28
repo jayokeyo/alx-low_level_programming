@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * _strcat - contactenate a source string to a destination string
+ *
  * @src: source string
  * @dest: destination string
  *
