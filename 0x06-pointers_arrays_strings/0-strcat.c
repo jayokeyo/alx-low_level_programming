@@ -5,7 +5,7 @@
  * @dest: destination string
  * Return: Pointer to the destination string
  */
-char _strcat(char *dest, char *src)
+char *_strcat(char *dest, char *src)
 {
 	int a;
 	int len = 0;
@@ -14,5 +14,5 @@ char _strcat(char *dest, char *src)
 		len++;
 	for (a = (len + 1); src[a - len] != '\0'; a++)
 		dest[a] = src[a - len];
-	return (*dest);
+	return (dest);
 }
