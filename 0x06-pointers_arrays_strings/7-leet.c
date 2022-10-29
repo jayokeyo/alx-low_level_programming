@@ -6,18 +6,23 @@
  */
 char *leet(char *s)
 {
-	int index, a;
+	int index, a, len;
 	char list1[] = {'A', 'E', 'O', 'T', 'L'};
 	char list2[] = {4, 3, 0, 7, 1};
 
-	while (s[index])
+	for (a = 0, s[a] != '\0'; a++)
+		len++;
+	if (len > 0)
 	{
-		for (a = 0; a < 5; a++)
+		while (s[index])
 		{
-			if (s[index] == list1[a] || s[index] == (list1[a] + 32))
-				s[index] = list2[a];
+			for (a = 0; a < 5; a++)
+			{
+				if (s[index] == list1[a] || s[index] == (list1[a] + 32))
+					s[index] = list2[a];
+			}
+			index++;
 		}
-		index++;
 	}
 	return (s);
 }
