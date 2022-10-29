@@ -10,7 +10,7 @@ char *leet(char *s)
 	char list1[] = {'A', 'E', 'O', 'T', 'L'};
 	char list2[] = {4, 3, 0, 7, 1};
 
-	for (a = 0, s[a] != '\0'; a++)
+	for (a = 0; s[a] != '\0'; a++)
 		len++;
 	if (len > 0)
 	{
