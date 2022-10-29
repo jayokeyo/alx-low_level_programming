@@ -6,7 +6,7 @@
  */
 char *leet(char *s)
 {
-	int index, a, len;
+	int index, a, len = 0;
 	char list1[] = {'A', 'E', 'O', 'T', 'L'};
 	char list2[] = {4, 3, 0, 7, 1};
 
