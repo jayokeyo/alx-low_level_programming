@@ -8,7 +8,7 @@ char *leet(char *s)
 {
 	int index, a;
 	char *list1 = {'A', 'E', 'O', 'T', 'L'}
-	char *list2 = (4, 3, 0, 7, 1)
+	char *list2 = {4, 3, 0, 7, 1}
 
 	while (s[index])
 	{
