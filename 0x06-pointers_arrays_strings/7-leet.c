@@ -12,17 +12,14 @@ char *leet(char *s)
 
 	for (a = 0; s[a] != '\0'; a++)
 		len++;
-	if (len > 0)
+	while (s[index] && len > 0)
 	{
-		while (s[index])
+		for (a = 0; a < 5; a++)
 		{
-			for (a = 0; a < 5; a++)
-			{
-				if (s[index] == list1[a] || s[index] == (list1[a] + 32))
-					s[index] = list2[a];
-			}
-			index++;
+			if (s[index] == list1[a] || s[index] == (list1[a] + 32))
+				s[index] = list2[a];
 		}
+		index++;
 	}
 	return (s);
 }
