@@ -7,8 +7,8 @@
 char *leet(char *s)
 {
 	int index, a;
-	char *list1 = {'A', 'E', 'O', 'T', 'L'}
-	char *list2 = {4, 3, 0, 7, 1}
+	char *list1 = {'A', 'E', 'O', 'T', 'L'};
+	char *list2 = {4, 3, 0, 7, 1};
 
 	while (s[index])
 	{
@@ -17,6 +17,7 @@ char *leet(char *s)
 			if (s[index] == list1[a] || s[index] == (list1[a] + 32))
 				s[index] = list2[a];
 		}
+		index++;
 	}
 	return (s);
 }
