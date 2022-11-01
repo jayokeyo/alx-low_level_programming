@@ -14,7 +14,7 @@ char *_strchr(char *s, char c)
 	{
 		if (s[a] == c)
 		{
-			d = (void *)s + a;
+			d = (unsigned int)s + a;
 			p = (void *)d;
 		}
 		else
