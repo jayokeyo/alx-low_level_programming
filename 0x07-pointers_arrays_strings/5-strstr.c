@@ -41,5 +41,5 @@ char *_strstr(char *haystack, char *needle)
 	if (placeholder == 0 || haystack[0] == '\0' || needle[0] == '\0')
 		return ('\0');
 	else
-		return ((char *)d);
+		return (needle);
 }
