@@ -12,7 +12,9 @@ char *_strchr(char *s, char c)
 	for (a = 0; s[a] != '\0'; a++)
 	{
 		if (s[a] == c)
-			d = s + a;
+		{
+			d = (int)s + a;
+			d = (void *)d;
 		else
 			d = '\0';
 	}
