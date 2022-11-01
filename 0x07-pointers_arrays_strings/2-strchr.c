@@ -7,17 +7,18 @@
  */
 char *_strchr(char *s, char c)
 {
-	long int a, d;
+	unsigned int a, d;
+	char *p;
 
 	for (a = 0; s[a] != '\0'; a++)
 	{
 		if (s[a] == c)
 		{
-			d = (long int)s + a;
-			d = ((void(*)(void))d)();
+			d = (void *)s + a;
+			p = (void *)d;
 		}
 		else
-			d = '\0';
+			p = '\0';
 	}
-	return (d);
+	return (p);
 }
