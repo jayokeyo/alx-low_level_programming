@@ -7,7 +7,8 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-	int a,b, counter = 0, flag = 1;
+	int a,b, flag = 1;
+	long int c, counter = 0;
 
 	for (a = 0; s[a] != '\0'; a++)
 	{
@@ -26,5 +27,6 @@ char *_strpbrk(char *s, char *accept)
 		else
 			break;
 	}
-	return (s + (void *)counter);
+	c = (long int)s + counter;
+	return ((char *)c);
 }
