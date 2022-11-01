@@ -7,9 +7,9 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int index = 0, b = 0, c = size - 1, sum1 = 0, sum2 = 0;
+	int index, b = 0, c = size - 1, sum1 = 0, sum2 = 0;
 
-	while (a[index])
+	for (index = 0; a[index] != '\0'; index++)
 	{
 		if (index == b)
 		{
@@ -21,7 +21,6 @@ void print_diagsums(int *a, int size)
 			sum2 += a[index];
 			c += (size - 1);
 		}
-		index++;
 	}
 	printf("%d, %d\n", sum1, sum2);
 }
