@@ -40,11 +40,11 @@ char *_strstr(char *haystack, char *needle)
 		}
 	}
 	if (placeholder == 0 || haystack[0] == '\0' || needle[0] == '\0')
-		return ('\0');
+		b = '\0';
 	else
 	{
 		for (a = 0; a < len; a++)
 			b[a] = haystack[d + a];
-		return (b);
 	}
+	return (b);
 }
