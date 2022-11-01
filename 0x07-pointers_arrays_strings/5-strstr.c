@@ -9,6 +9,7 @@ char *_strstr(char *haystack, char *needle)
 {
 	int a, c, placeholder = 0, len = 0;
 	long int d, counter = 0;
+	char *b;
 
 	for (a = 0; needle[a] != '\0'; a++)
 		len++;
@@ -41,5 +42,9 @@ char *_strstr(char *haystack, char *needle)
 	if (placeholder == 0 || haystack[0] == '\0' || needle[0] == '\0')
 		return ('\0');
 	else
-		return ((char *)d);
+	{
+		for (a = 0; a < len; a++)
+			b[a] = haystack[d + a];
+		return (b);
+	}
 }
