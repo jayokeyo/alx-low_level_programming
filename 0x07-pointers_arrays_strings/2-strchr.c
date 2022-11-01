@@ -15,10 +15,10 @@ char *_strchr(char *s, char c)
 		if (s[a] == c)
 		{
 			d = (unsigned int)s + a;
-			p = (char *)d;
+			p = (void *)d;
 		}
 		else
-			p = '\0';
+			return ('\0');
 	}
 	return (p);
 }
