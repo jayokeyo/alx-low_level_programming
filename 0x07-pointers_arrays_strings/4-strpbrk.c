@@ -27,6 +27,11 @@ char *_strpbrk(char *s, char *accept)
 		else
 			break;
 	}
-	c = (long int)s + counter;
-	return ((char *)c);
+	if (flag == 0)
+		return ('\0');
+	else
+	{
+		c = (long int)s + counter;
+		return ((char *)c);
+	}
 }
