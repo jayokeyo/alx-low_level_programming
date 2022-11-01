@@ -27,7 +27,7 @@ char *_strpbrk(char *s, char *accept)
 		else
 			break;
 	}
-	if (flag == 0)
+	if (flag == 0 || s[0] == '\0' || accept[0] == '\0')
 		return ('\0');
 	else
 	{
