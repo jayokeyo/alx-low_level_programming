@@ -6,16 +6,20 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int a, b, sum1, sum2;
+	int index = 0, b = 0, c = size - 1, sum1 = 0, sum2 = 0;
 
-	for (a = 0; a < size; a++)
+	while (a[index])
 	{
-		for (b = 0; b < size; b++)
+		if (index == b)
 		{
-			if (a == b)
-				sum1 += a[a][b];
-			if ((size - b) == a)
-				sum2 += a[a][b];
+			sum1 += a[index];
+			b += (size + 1);
 		}
+		if (c == index)
+		{
+			sum2 += a[index];
+			c += (size - 1);
+		}
+		index++;
 	}
 }
