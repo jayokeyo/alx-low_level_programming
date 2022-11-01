@@ -7,14 +7,14 @@
  */
 char *_strchr(char *s, char c)
 {
-	unsigned int a, d;
+	int a, d;
 	char *p;
 
 	for (a = 0; s[a] != '\0'; a++)
 	{
 		if (s[a] == c)
 		{
-			d = (unsigned int)s + a;
+			d = (void *)s + a;
 			p = (void *)d;
 		}
 		else
