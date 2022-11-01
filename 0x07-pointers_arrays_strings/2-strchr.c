@@ -15,6 +15,7 @@ char *_strchr(char *s, char c)
 		{
 			d = (int)s + a;
 			d = (void *)d;
+		}
 		else
 			d = '\0';
 	}
