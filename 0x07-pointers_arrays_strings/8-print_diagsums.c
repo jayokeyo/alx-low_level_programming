@@ -7,20 +7,11 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int index, b = 0, c = size - 1, sum1 = 0, sum2 = 0;
+	int index, sum1 = 0, sum2 = 0;
 
-	for (index = 0; a[index] != '\0'; index++)
-	{
-		if (index == b)
-		{
-			sum1 += a[index];
-			b += (size + 1);
-		}
-		if (c == index)
-		{
-			sum2 += a[index];
-			c += (size - 1);
-		}
-	}
+	for (index = 0; index < (size * size); index += (size + 1))
+		sum1 += a[index];
+	for (index = (size - 1); index < (size * size); index += (size - 1))
+		sum2 += a[index];
 	printf("%d, %d\n", sum1, sum2);
 }
