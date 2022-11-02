@@ -19,5 +19,9 @@ char *_strchr(char *s, char c)
 		else
 			p = '\0';
 	}
+	if (s[0] == '\0')
+		p = '\0';
+	if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')))
+		p = '\0';
 	return (p);
 }
