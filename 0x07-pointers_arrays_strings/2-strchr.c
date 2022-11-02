@@ -15,11 +15,9 @@ char *_strchr(char *s, char c)
 		if (s[a] == c)
 		{
 			p = &s[a];
-			return (p);
 		}
 		else
-			return ('\0');
+			p = '\0';
 	}
-	if (s[0] == '\0' || c == '\0')
-		return ('\0');
+	return (p);
 }
