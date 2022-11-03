@@ -37,7 +37,7 @@ int comp_char(char *s)
 	int len = find_len(s);
 	int ret;
 
-	if (i <= (len / 2) && s[i] != s[len - i])
+	if (i <= (len / 2) && s[i] != s[len - i - 1])
 	{
 		ret = 0;
 	}
