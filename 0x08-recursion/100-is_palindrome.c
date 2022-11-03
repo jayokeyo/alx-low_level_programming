@@ -39,7 +39,7 @@ int comp_char(char *s)
 
 	if (i <= (len / 2) && s[i] != s[len - i])
 	{
-		ret = 0
+		ret = 0;
 	}
 	else
 	{
