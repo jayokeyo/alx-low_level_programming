@@ -20,6 +20,12 @@ int _sqrt_recursion(int n)
 		sqrt = _sqrt(n, i);
 	return (sqrt);
 }
+/**
+ * _sqrt - evaluates the natural square root of a number
+ * @n: number whose natural square is evaluated
+ * @i: trial root
+ * Return: natural square root
+ */
 int _sqrt(int n, int i)
 {
 	int sqrt;
