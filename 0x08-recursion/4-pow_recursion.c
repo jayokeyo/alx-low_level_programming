@@ -7,6 +7,8 @@
  */
 int _pow_recursion(int x, int y)
 {
+	int ans;
+
 	ans = x ** y;
 	return (ans);
 }
