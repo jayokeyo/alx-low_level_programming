@@ -8,14 +8,15 @@ int _sqrt(int n, int i);
 
 int _sqrt_recursion(int n)
 {
-	int i = 2;
+	int i = 2, sqrt;
 
 	if (n <= 0)
 		return (-1);
 	if (n == 1)
 		return (1);
 	if (n > 1)
-		return (_sqrt(n, i));
+		sqrt = _sqrt(n, i);
+	return (sqrt);
 }
 int _sqrt(int n, int i)
 {
