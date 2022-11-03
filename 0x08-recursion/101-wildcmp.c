@@ -5,13 +5,15 @@
  * @s2: second input string
  * Return: 1 if identical otherwise 0
  */
-int index = 0;
+int i = 0;
 int wildcmp(char *s1, char *s2)
 {
-	if (s1[index] == s2[index] || s2[index] == "*")
+	int ret;
+
+	if (s1[i] == s2[i] || s2[i] == "*")
 	{
 		ret = 1;
-		index++;
+		i++;
 		wildcmp(s1, s2);
 	}
 	else
