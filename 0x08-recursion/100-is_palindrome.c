@@ -26,7 +26,7 @@ int is_palindrome(char *s)
 		{
 			ret = 1;
 			i++;
-			comp_char(s);
+			is_palindrome(s);
 		}
 	}
 	else
