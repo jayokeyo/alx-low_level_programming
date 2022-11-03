@@ -30,11 +30,14 @@ int _sqrt(int n, int i)
 {
 	int sqrt;
 
-	if (i * i == n)
+	if (n / i == i && n % i == 0)
 		sqrt = i;
 	else
 	{
-		sqrt = _sqrt(n, i++);
+		if (n / i > i)
+			return (-1);
+		else
+			sqrt = _sqrt(n, i++);
 	}
 	return (sqrt);
 }
