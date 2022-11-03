@@ -5,7 +5,7 @@
  */
 void _print_rev_recursion(char *s)
 {
-	int a = s;
+	char *a = s;
 
 	if (*s != '\0')
 	{
