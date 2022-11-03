@@ -9,6 +9,7 @@ int is_prime_number(int n)
 	int ret, div = 2;
 
 	if (div <= (n / 2))
+	{
 		if (n % div == 0)
 			ret = 1;
 		else
@@ -17,5 +18,6 @@ int is_prime_number(int n)
 			div++;
 			is_prime_number(n);
 		}
+	}
 	return (ret);
 }
