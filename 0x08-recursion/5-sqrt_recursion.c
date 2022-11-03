@@ -34,7 +34,7 @@ int _sqrt(int n, int i)
 		sqrt = i;
 	else
 	{
-		_sqrt(n, i++);
+		sqrt = _sqrt(n, i++);
 	}
 	return (sqrt);
 }
