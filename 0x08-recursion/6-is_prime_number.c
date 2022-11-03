@@ -23,7 +23,7 @@ int is_prime_number(int n)
 	}
 	else
 	{
-		if (n == 1 || n == 2)
+		if (n == 2)
 			ret = 1;
 		else
 			ret = 0;
