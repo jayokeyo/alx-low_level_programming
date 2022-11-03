@@ -6,4 +6,7 @@
  * Return: x raised to y
  */
 int _pow_recursion(int x, int y)
-	return (x ** y);
+{
+	ans = x ** y;
+	return (ans);
+}
