@@ -37,14 +37,16 @@ int comp_char(char *s)
 	int len = find_len(s);
 	int ret;
 
-	if (s[i] == s[len - i])
+	if (i <= (len / 2) && s[i] != s[len - i])
+	{
+		ret = 0
+	}
+	else
 	{
 		comp_char(s);
 		i++;
 		ret = 1;
 	}
-	else
-		ret = 0;
 	return (ret);
 }
 int is_palindrome(char *s)
