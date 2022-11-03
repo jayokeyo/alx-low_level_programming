@@ -35,7 +35,7 @@ int _sqrt(int n, int i)
 	else
 	{
 		if (n / i > i)
-			return (-1);
+			sqrt = -1;
 		else
 			sqrt = _sqrt(n, i++);
 	}
