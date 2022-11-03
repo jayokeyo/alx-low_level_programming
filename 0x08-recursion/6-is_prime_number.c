@@ -4,11 +4,13 @@
  * @n: integer input
  * Return: 1 if n is prime otherwise 0
  */
+int div = 2;
+
 int is_prime_number(int n)
 {
-	int ret, div = 2;
+	int ret;
 
-	if (div <= (n / 2))
+	if (div <= (n / 2) && div > 0)
 	{
 		if (n % div == 0)
 			ret = 1;
@@ -19,5 +21,7 @@ int is_prime_number(int n)
 			is_prime_number(n);
 		}
 	}
+	else
+		ret = 0;
 	return (ret);
 }
