@@ -10,18 +10,23 @@ int is_prime_number(int n)
 {
 	int ret;
 
-	if (div <= (n / 2) && div > 0)
+	if (div <= (n / 2) && n > 2)
 	{
 		if (n % div == 0)
-			ret = 1;
+			ret = 0;
 		else
 		{
-			ret = 0;
+			ret = 1;
 			div++;
 			is_prime_number(n);
 		}
 	}
 	else
-		ret = 0;
+	{
+		if (n == 1 || n == 2)
+			ret = 1;
+		else
+			ret = 0;
+	}
 	return (ret);
 }
