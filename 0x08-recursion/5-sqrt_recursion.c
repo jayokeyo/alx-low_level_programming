@@ -4,6 +4,8 @@
  * @n: number whose square root is evaluated
  * Return: Natural square root otherwise -1
  */
+int _sqrt(int n, int i = 2);
+
 int _sqrt_recursion(int n)
 {
 	if (n <= 0)
