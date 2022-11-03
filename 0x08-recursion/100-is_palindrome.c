@@ -43,9 +43,9 @@ int comp_char(char *s)
 	}
 	else
 	{
-		comp_char(s);
-		i++;
 		ret = 1;
+		i++;
+		comp_char(s);
 	}
 	return (ret);
 }
