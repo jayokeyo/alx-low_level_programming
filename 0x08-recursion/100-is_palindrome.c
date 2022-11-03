@@ -49,7 +49,9 @@ int comp_char(char *s)
 }
 int is_palindrome(char *s)
 {
-	len = find_len(s);
+	int len = find_len(s);
+	int pal;
+
 	if (len == 0)
 		pal = 1;
 	if (len == 1)
