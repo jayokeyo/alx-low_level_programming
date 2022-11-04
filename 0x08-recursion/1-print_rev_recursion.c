@@ -21,11 +21,10 @@ void _print_rev_recursion(char *s)
 	int r;
 
 	r = find_len(s);
-	_putchar(*s);
+	_putchar(*(s + r - a));
 	if (r >= a)
 	{
 		a++;
-		s += len - a;
 		_print_rev_recursion(s);
 	}
 	if (r < a)
