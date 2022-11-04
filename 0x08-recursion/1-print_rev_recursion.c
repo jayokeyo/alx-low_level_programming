@@ -18,12 +18,15 @@ int find_len(char *s)
 }
 void _print_rev_recursion(char *s)
 {
+	int r;
+
 	r = find_len(s);
-	_putchar(s);
+	_putchar(*s);
 	if (r >= a)
 	{
 		a++;
-		_print_rev_recursion(s[len - a]);
+		s += len - a;
+		_print_rev_recursion(s);
 	}
 	if (r < a)
 		_putchar('\n');
