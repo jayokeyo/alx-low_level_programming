@@ -23,7 +23,8 @@ void _print_rev_recursion(char *s)
 	if (r >= a)
 	{
 		a++;
-		_print_rev_recursion(s[len - a]);
+		s += (len - a);
+		_print_rev_recursion(s);
 	}
 	if (r < a)
 		_putchar('\n');
