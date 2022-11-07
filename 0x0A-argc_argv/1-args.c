@@ -6,7 +6,7 @@
  * @argv: pointer arrays to arguments
  * Return: 0 success
  */
-int main(int argc, char *argv[])
+int main2(int argc, char *argv[])
 {
 	if (argc > 0)
 		printf("%d\n", argc);
