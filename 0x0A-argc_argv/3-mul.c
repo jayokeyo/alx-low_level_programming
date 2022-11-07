@@ -12,7 +12,7 @@ int main(int argc, char __attribute__((__unused__)) *argv[])
 
 	if (argc == 3)
 	{
-		printf("%d\n", (argv[1] * argv[2]));
+		printf("%d\n", ((int)argv[1] * (int)argv[2]));
 		ret = 0;
 	}
 	else
