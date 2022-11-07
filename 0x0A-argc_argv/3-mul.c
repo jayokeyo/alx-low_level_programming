@@ -8,14 +8,17 @@
  */
 int main(int argc, char *argv[])
 {
+	int ret;
+
 	if (argc == 3)
 	{
 		printf("%d\n", (argv[1] * argv[2]));
-		return (0);
+		ret = 0;
 	}
 	else
 	{
 		printf("Error\n");
-		return (1);
+		ret = 1;
 	}
+	return (ret);
 }
