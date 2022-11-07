@@ -18,16 +18,21 @@ int main(int argc, char __attribute__((__unused__)) *argv[])
 	}
 	else
 	{
-		sum += atoi(argv[1]) / 25;
-		rem = atoi(argv[1]) % 25;
-		sum += rem / 10;
-		rem = rem % 10;
-		sum += rem / 5;
-		rem = rem % 5;
-		sum += rem / 2;
-		rem = rem / 2;
-		sum += rem;
-		printf("%d\n", sum);
+		if (atoi(argv[1]) < 0)
+			printf("%d\n", 0);
+		else
+		{
+			sum += atoi(argv[1]) / 25;
+			rem = atoi(argv[1]) % 25;
+			sum += rem / 10;
+			rem = rem % 10;
+			sum += rem / 5;
+			rem = rem % 5;
+			sum += rem / 2;
+			rem = rem / 2;
+			sum += rem;
+			printf("%d\n", sum);
+		}
 		ret = 0;
 	}
 	return (ret);
