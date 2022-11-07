@@ -9,7 +9,7 @@
  */
 int main(int argc, char __attribute__((__unused__)) *argv[])
 {
-	int ret, rem, sum = 0;
+	int ret, rem, arg, sum = 0;
 
 	if (argc != 2)
 	{
@@ -18,18 +18,19 @@ int main(int argc, char __attribute__((__unused__)) *argv[])
 	}
 	else
 	{
-		if (atoi(argv[1]) < 0)
+		arg = atoi(argv[1]);
+		if (arg < 0)
 			printf("%d\n", 0);
 		else
 		{
-			sum += atoi(argv[1]) / 25;
-			rem = atoi(argv[1]) % 25;
+			sum += arg / 25;
+			rem = arg % 25;
 			sum += rem / 10;
 			rem = rem % 10;
 			sum += rem / 5;
 			rem = rem % 5;
 			sum += rem / 2;
-			rem = rem / 2;
+			rem = rem % 2;
 			sum += rem;
 			printf("%d\n", sum);
 		}
