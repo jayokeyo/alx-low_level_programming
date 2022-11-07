@@ -15,7 +15,7 @@ int main(int argc, char  __attribute__((__unused__)) *argv[])
 	{
 		for (j = 0; argv[i][j]; j++)
 		{
-			if (argv[i][j] < 0 || argv[i][j] > 9)
+			if (atoi(argv[i][j]) < 0 || atoi(argv[i][j]) > 9)
 			{
 				printf("Error\n");
 				ret = 1;
