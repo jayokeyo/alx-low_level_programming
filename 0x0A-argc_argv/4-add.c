@@ -9,7 +9,7 @@
  */
 int main(int argc, char  __attribute__((__unused__)) *argv[])
 {
-	int i, j, sum = 0;
+	int i, j, ret = 0, sum = 0;
 
 	for (i = 1; i < argc; i++)
 	{
@@ -18,17 +18,18 @@ int main(int argc, char  __attribute__((__unused__)) *argv[])
 			if (argv[i][j] < 0 && argv[i][j] > 9)
 			{
 				printf("Error\n");
-				sum = 1;
+				ret = 1;
 			}
 		}
 	}
-	if (sum == 0)
+	if (ret == 0)
 	{
 		if (argc > 2)
 		{
 			for (i = 1; i < argc; i++)
-				sum += argv[i];
+				sum += atoi(argv[i]);
 		}
+		printf("%d\n", sum);
 	}
-	return (sum);
+	return (ret);
 }
