@@ -14,7 +14,7 @@ char *create_array(unsigned int size, char c)
 
 	if (size > 0)
 	{
-		pty = (char*)malloc(size);
+		pty = (char *)malloc(size);
 		for (i = 0; i < size; i++)
 			*(pty + i) = c;
 		return (pty);
