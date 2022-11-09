@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stddef.h>
-#include <string.h>
 /**
  * _strdup - returns the address of a newly allocated space
  * @str: string to be copied onto the newly allocated memory
@@ -10,12 +9,18 @@
 char *_strdup(char *str)
 {
 	char *ptr;
-	int i;
+	int i, len = 0;
+
+	while(*str)
+	{
+		len++;
+		str++;
+	}
 
 	if (*str)
 	{
-		ptr = (char *)malloc(strlen(*str));
-		for (i = 0; i < strlen(*str); i++)
+		ptr = (char *)malloc(len);
+		for (i = 0; i < len; i++)
 		{
 			*(ptr + i) = *(str + i);
 		}
