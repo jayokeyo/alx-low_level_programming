@@ -21,6 +21,5 @@ char *create_array(unsigned int size, char c)
 	}
 	else
 		ret = NULL;
-	free(pty);
 	return (ret);
 }
