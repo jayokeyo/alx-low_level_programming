@@ -11,13 +11,13 @@ int **alloc_grid(int width, int height)
 {
 	int i, j;
 	int **ret;
-	int **ptr = (int **)malloc(height * sizeof(int));
+	int **ptr = (int **)malloc(height * sizeof(int) + sizeof(int));
 
 	if (height != 0)
 	{
 		for (i = 0; i < height; i++)
 		{
-			ptr[i] = (int *)malloc(width * sizeof(int));
+			ptr[i] = (int *)malloc(width * sizeof(int) + sizeof(int));
 			for (j = 0; j < width; j++)
 				ptr[i][j] = 0;
 		}
