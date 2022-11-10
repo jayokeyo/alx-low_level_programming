@@ -27,11 +27,11 @@ char *_strdup(char *str)
 			ptr = (char *)malloc(len + 1);
 			for (i = 0; i <= len; i++)
 				*(ptr + i) = str[i];
-			ret = ptr;
 			free(ptr);
+			ret = ptr;
 		}
 		else
-			ret = ptr;
+			ret = NULL;
 	}
 	return (ret);
 }
