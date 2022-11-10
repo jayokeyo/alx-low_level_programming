@@ -12,19 +12,17 @@ char *str_concat(char *s1, char *s2)
 	char *ptr;
 	int i, j, len1 = 0, len2 = 0;
 
-	while (*s1)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		len1++;
-		s1++;
 	}
-	while (*s2)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		len2++;
-		s2++;
 	}
 	if (len1 + len2 != 0)
 	{
-		ptr = (char *)malloc(len1 + len2);
+		ptr = (char *)malloc(len1 + len2 + 1);
 		if (len1 != 0)
 		{
 			for (i = 0; i < len1; i++)
