@@ -29,9 +29,9 @@ char *str_concat(char *s1, char *s2)
 			{
 				*(ptr + i) = *(s1 + i);
 			}
-			for (j = len1; j < (len1 + len2); j++)
+			for (j = len1; j < (len1 + len2 + 1); j++)
 			{
-				*(ptr + j) = *(s1 + j);
+				*(ptr + j) = *(s2 + j - len1);
 			}
 		}
 		else
