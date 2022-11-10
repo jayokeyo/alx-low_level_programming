@@ -9,7 +9,6 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int i, j;
 	int **ret;
 	int **ptr = (int **)calloc(height, sizeof(int));
 
