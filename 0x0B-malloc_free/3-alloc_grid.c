@@ -15,7 +15,7 @@ int **alloc_grid(int width, int height)
 
 	if (height != 0)
 	{
-		for (i = 1; i <= height; i++)
+		for (i = 0; i < height; i++)
 		{
 			ptr[i] = (int *)calloc((width + 1), sizeof(int));
 		}
