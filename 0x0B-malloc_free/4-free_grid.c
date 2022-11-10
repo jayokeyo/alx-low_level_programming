@@ -8,14 +8,14 @@
  */
 void free_grid(int **grid, int height)
 {
-	long unsigned int i;
+	/*unsigned long int i;*/
 
 	if (height != 0 && **grid != '\0')
 	{
-		for (i = 0; i < (height * sizeof(int *)); i++)
+		/*for (i = 0; i < (height * sizeof(int *)); i++)
 		{
 			free(grid[i]);
-		}
+		}*/
 		free(grid);
 	}
 }
