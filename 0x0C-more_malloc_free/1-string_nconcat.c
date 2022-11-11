@@ -21,13 +21,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (i = 0; i < j; i++)
 	{
-		*(pty + i) = *(s1 + i);
+		*(ptr + i) = *(s1 + i);
 	}
 	if (k != 0)
 	{
 		for (i = 0; i < n; i++)
 		{
-			*(pty + j + i) = *(s2 + i);
+			*(ptr + j + i) = *(s2 + i);
 			if (*(s2 + i + 1) == '\0')
 				break;
 		}
