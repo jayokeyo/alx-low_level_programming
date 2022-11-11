@@ -37,5 +37,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		if (n < k)
 			*(ptr + j + i) = '\0';
 	}
+	else
+		*(ptr + j) = '\0';
 	return (ptr);
 }
