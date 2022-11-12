@@ -21,33 +21,65 @@ void print_string(char *s)
  */
 void print_digit(int num)
 {
-	int n, th, hun, tens, rem;
+	int n, tth, hth, th, hun, tens, rem;
 
 	n = num;
-	th = n / 1000;
-	if (th == 0)
+	hth = n / 100000;
+	if (hth == 0)
 	{
-		rem = n % 1000;
-		hun = rem / 100;
-		if (hun == 0)
+		rem = n % 100000;
+		tth = rem / 10000;
+		if (tth == 0)
 		{
-			rem = rem % 100;
-			tens = rem / 10;
-			if (tens == 0)
+			rem = rem % 10000;
+			th = rem / 1000;
+			if (th == 0)
 			{
-				_putchar((rem % 10) + '0');
-				_putchar('\n');
+				rem = rem % 1000;
+				hun = rem / 100;
+				if (hun == 0)
+				{
+					rem = rem % 100;
+					tens = rem / 10;
+					if (tens == 0)
+					{
+						_putchar((rem % 10) + '0');
+						_putchar('\n');
+					}
+					else
+					{
+						_putchar(tens + '0');
+						_putchar((rem % 10) + '0');
+						_putchar('\n');
+					}
+				}
+				else
+				{
+					_putchar(hun + '0');
+					rem = rem % 100;
+					_putchar((rem / 10) + '0');
+					_putchar((rem % 10) + '0');
+					_putchar('\n');
+				}
 			}
 			else
 			{
-				_putchar(tens + '0');
+				_putchar(th + '0');
+				rem = n % 1000;
+				_putchar((rem / 100) + '0');
+				rem = rem % 100;
+				_putchar((rem / 10) + '0');
 				_putchar((rem % 10) + '0');
 				_putchar('\n');
 			}
 		}
 		else
 		{
-			_putchar(hun + '0');
+			_putchar(tth + '0');
+			rem = n % 10000;
+			_putchar((rem / 1000) + '0');
+			rem = rem % 1000;
+			_putchar((rem / 100) + '0');
 			rem = rem % 100;
 			_putchar((rem / 10) + '0');
 			_putchar((rem % 10) + '0');
@@ -56,8 +88,12 @@ void print_digit(int num)
 	}
 	else
 	{
-		_putchar(th + '0');
-		rem = n % 1000;
+		_putchar(hth + '0');
+		rem = n % 100000;
+		_putchar((rem / 10000) + '0');
+		rem = rem % 10000;
+		_putchar((rem / 1000) + '0');
+		rem = rem % 1000;
 		_putchar((rem / 100) + '0');
 		rem = rem % 100;
 		_putchar((rem / 10) + '0');
