@@ -6,6 +6,8 @@
  */
 int mul(int *num)
 {
+	int n, d;
+
 	n = Number_of_arguments(num);
 	d = is_digit(num);
 
@@ -17,8 +19,14 @@ int mul(int *num)
 	else
 		print_digit(num[0] * num[1]);
 }
+/**
+ * print_string - prints input string
+ * @s: input string
+ */
 void print_string(char *s)
 {
+	int i = 0;
+
 	while (*s)
 	{
 		_putchar(*(s + i));
@@ -26,6 +34,10 @@ void print_string(char *s)
 		s++;
 	}
 }
+/**
+ * print_digit - prints input digit
+ * @num: input integer
+ */
 void print_digit(int *num)
 {
 	int n, th, hun, tens, rem;
@@ -72,6 +84,11 @@ void print_digit(int *num)
 		_putchar('\n');
 	}
 }
+/**
+ * Number_of_arguments - evaluates the number of elements of an array
+ * @num: pointer to array of integers
+ * Return: length of array
+ */
 int Number_of_arguments(int *num)
 {
 	int i = 0, len = 0;
@@ -83,6 +100,11 @@ int Number_of_arguments(int *num)
 	}
 	return (len);
 }
+/**
+ * is_digit - checks if elements of an array are all digits
+ * @num: pointer to array of integers
+ * Return: 0 if all elements are digits else 1
+ */
 int is_digit(int *num)
 {
 	int len, n, i, ret;
