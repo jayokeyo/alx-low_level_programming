@@ -1,10 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-
-void print_string(char *s);
-void print_digit(int num);
-int is_digit(char *num);
-
 /**
  * print_string - prints input string
  * @s: input string
