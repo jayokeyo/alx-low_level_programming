@@ -9,27 +9,28 @@
 void print_string(char *s);
 void print_digit(int num);
 int is_digit(char *num);
-int mul(int argc, char *argv[]);
+int mul(char *arg);
 char _putchar(char c);
 
-int mul(int argc, char *argv[])
+int mul(char *arg)
 {
-	int n, d;
+	int n, d, len = 0;
 
-	for (n = 1; argv[n]; n++)
+	for (n = 1; arg[n]; n++)
 	{
-		d = is_digit(argv[n]);
+		len++;
+		d = is_digit(arg[n]);
 		if (d == 1)
 			break;
 	}
 
-	if (argc != 3 || d == 0 || argv[1] == NULL || argv[2] == NULL)
+	if (len != 2 || d == 0 || arg[1] == NULL || arg[2] == NULL)
 	{
 		print_string("Error\n");
 		exit(98);
 	}
 	else
-		print_digit(atoi(argv[1]) * atoi(argv[2]));
+		print_digit(atoi(arg[1]) * atoi(arg[2]));
 }
 /**
  * print_string - prints input string
@@ -117,4 +118,13 @@ int is_digit(char *num)
 		i++;
 	}
 	return (ret);
+}
+int main(int argc, char *argv[])
+{
+	char *s, i;
+
+	f0r (i = 1; i < argc)
+		*(s + i - 1) = argv[i];
+	mul(s);
+	return (0);
 }
