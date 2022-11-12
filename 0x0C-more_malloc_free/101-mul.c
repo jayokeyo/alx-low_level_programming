@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stddef.h>
 /**
  * print_string - prints input string
  * @s: input string
@@ -110,7 +109,7 @@ int is_digit(char *num)
 
 	while (*num)
 	{
-		if (*num >= '0' && *num <= '9' && num != "" && num != NULL)
+		if (*num >= '0' && *num <= '9')
 		{
 			ret = 0;
 			num++;
