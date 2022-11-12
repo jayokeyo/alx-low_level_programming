@@ -6,12 +6,9 @@
  */
 void print_string(char *s)
 {
-	int i = 0;
-
 	while (*s)
 	{
-		_putchar(*(s + i));
-		i++;
+		_putchar(*s);
 		s++;
 	}
 }
