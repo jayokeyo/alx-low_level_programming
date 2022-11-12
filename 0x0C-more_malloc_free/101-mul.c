@@ -1,37 +1,12 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stddef.h>
-/**
- * mul - multiplies two numbers
- * @num: array of two integers
- * Return: num[0] * num[1]
- */
+
 void print_string(char *s);
 void print_digit(int num);
-int is_digit(int num);
-int mul(int *arg);
+int is_digit(char *num);
 char _putchar(char c);
 
-int mul(int *arg)
-{
-	int n, d, len = 0;
-
-	for (n = 1; arg[n]; n++)
-	{
-		len++;
-		d = is_digit(arg[n]);
-		if (d == 1)
-			break;
-	}
-
-	if (len != 2 || d == 0)
-	{
-		print_string("Error\n");
-		exit(98);
-	}
-	else
-		print_digit(arg[1] * arg[2]);
-}
 /**
  * print_string - prints input string
  * @s: input string
@@ -102,21 +77,42 @@ void print_digit(int num)
  * @num: pointer to array of integers
  * Return: 0 if all elements are digits else 1
  */
-int is_digit(int num)
+int is_digit(char *num)
 {
 	int i = 0, ret;
 
-	if (num >= 0 && num <= 99999)
-		return (0);
-	else
-		return (1);
+	while (*num)
+	{
+		if (*num >= '0' && *num <= '9')
+		{
+			ret = 0;
+			num++;
+		}
+		else
+		{
+			ret = 1;
+			break;
+		}
+	}
 }
 int main(int argc, char *argv[])
 {
-	int *s, i;
+	int *s, i, r;
 
 	for (i = 1; i < argc; i++)
-		*(s + i - 1) = atoi(argv[i]);
-	mul(s);
+	{
+		r = is_digit(argv[i]);
+		if (r == 1)
+			break;
+	}
+	if (r == 0 && argc == 3)
+	{
+		print_digit(atoi(argv[1]) * atoi(argv[2]));
+	}
+	else
+	{
+		print_string("Error\n");
+		exit(98);
+	}
 	return (0);
 }
