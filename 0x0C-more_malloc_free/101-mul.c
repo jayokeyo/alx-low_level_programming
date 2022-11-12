@@ -109,7 +109,7 @@ int is_digit(char *num)
 
 	while (*num)
 	{
-		if (*num >= '0' && *num <= '9')
+		if (*num >= '0' && *num <= '9' && num != "" && num != NULL)
 		{
 			ret = 0;
 			num++;
