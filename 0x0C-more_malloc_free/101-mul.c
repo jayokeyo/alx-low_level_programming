@@ -1,11 +1,9 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stddef.h>
 
 void print_string(char *s);
 void print_digit(int num);
 int is_digit(char *num);
-char _putchar(char c);
 
 /**
  * print_string - prints input string
@@ -79,7 +77,7 @@ void print_digit(int num)
  */
 int is_digit(char *num)
 {
-	int i = 0, ret;
+	int ret;
 
 	while (*num)
 	{
@@ -97,7 +95,7 @@ int is_digit(char *num)
 }
 int main(int argc, char *argv[])
 {
-	int *s, i, r;
+	int i, r;
 
 	for (i = 1; i < argc; i++)
 	{
