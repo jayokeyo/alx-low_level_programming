@@ -8,25 +8,28 @@
  */
 void print_string(char *s);
 void print_digit(int num);
-int is_digit(int *num);
-int Number_of_arguments(int *num);
-int mul(int *num);
+int is_digit(char *num);
+int mul(int argc, char *argv[]);
 char _putchar(char c);
 
-int mul(int *num)
+int mul(int argc, char *argv[])
 {
 	int n, d;
 
-	n = Number_of_arguments(num);
-	d = is_digit(num);
+	for (n = 1; argv[n]; n++)
+	{
+		d = is_digit(argv[n]);
+		if (d == 1)
+			break;
+	}
 
-	if (n != 2 || d != 0 || num == NULL)
+	if (argc != 3 || d == 0 || argv[1] == NULL || argv[2] == NULL)
 	{
 		print_string("Error\n");
 		exit(98);
 	}
 	else
-		print_digit(num[0] * num[1]);
+		print_digit(atoi(argv[1]) * atoi(argv[2]));
 }
 /**
  * print_string - prints input string
@@ -94,41 +97,24 @@ void print_digit(int num)
 	}
 }
 /**
- * Number_of_arguments - evaluates the number of elements of an array
- * @num: pointer to array of integers
- * Return: length of array
- */
-int Number_of_arguments(int *num)
-{
-	int i = 0, len = 0;
-
-	while (num[i])
-	{
-		len++;
-		i++;
-	}
-	return (len);
-}
-/**
  * is_digit - checks if elements of an array are all digits
  * @num: pointer to array of integers
  * Return: 0 if all elements are digits else 1
  */
-int is_digit(int *num)
+int is_digit(char *num)
 {
-	int len, n, i, ret;
-	len = Number_of_arguments(num);
+	int i = 0, ret;
 
-	for (i = 0; i < len; i++)
+	while (*num)
 	{
-		n = *(num + i);
-		if (n >= 0 && n <= 99999)
+		if (*(num + i) >= 0 && *(num + i) <= 99999)
 			ret = 0;
 		else
 		{
 			ret = 1;
 			break;
 		}
+		i++;
 	}
 	return (ret);
 }
