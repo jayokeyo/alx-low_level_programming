@@ -87,6 +87,7 @@ int is_digit(char *num)
 			break;
 		}
 	}
+	return (ret);
 }
 int main(int argc, char *argv[])
 {
