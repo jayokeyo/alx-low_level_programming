@@ -8,11 +8,11 @@
  */
 void print_string(char *s);
 void print_digit(int num);
-int is_digit(char *num);
-int mul(char *arg);
+int is_digit(int num);
+int mul(int *arg);
 char _putchar(char c);
 
-int mul(char *arg)
+int mul(int *arg)
 {
 	int n, d, len = 0;
 
@@ -24,13 +24,13 @@ int mul(char *arg)
 			break;
 	}
 
-	if (len != 2 || d == 0 || arg[1] == NULL || arg[2] == NULL)
+	if (len != 2 || d == 0)
 	{
 		print_string("Error\n");
 		exit(98);
 	}
 	else
-		print_digit(atoi(arg[1]) * atoi(arg[2]));
+		print_digit(arg[1] * arg[2]);
 }
 /**
  * print_string - prints input string
@@ -102,29 +102,21 @@ void print_digit(int num)
  * @num: pointer to array of integers
  * Return: 0 if all elements are digits else 1
  */
-int is_digit(char *num)
+int is_digit(int num)
 {
 	int i = 0, ret;
 
-	while (*num)
-	{
-		if (*(num + i) >= 0 && *(num + i) <= 99999)
-			ret = 0;
-		else
-		{
-			ret = 1;
-			break;
-		}
-		i++;
-	}
-	return (ret);
+	if (num >= 0 && num <= 99999)
+		return (0);
+	else
+		return (1);
 }
 int main(int argc, char *argv[])
 {
-	char *s, i;
+	int *s, i;
 
-	f0r (i = 1; i < argc)
-		*(s + i - 1) = argv[i];
+	for (i = 1; i < argc; i++)
+		*(s + i - 1) = atoi(argv[i]);
 	mul(s);
 	return (0);
 }
