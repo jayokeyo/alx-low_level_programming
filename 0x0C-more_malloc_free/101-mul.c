@@ -4,6 +4,12 @@
  * @num: array of two integers
  * Return: num[0] * num[1]
  */
+void print_string(char *s);
+void print_digit(int num);
+int is_digit(int *num);
+int Number_of_arguments(int *num);
+int mul(int *num);
+
 int mul(int *num)
 {
 	int n, d;
@@ -42,7 +48,7 @@ void print_digit(int *num)
 {
 	int n, th, hun, tens, rem;
 
-	n = num[i];
+	n = *num;
 	th = n / 1000;
 	if (th == 0)
 	{
