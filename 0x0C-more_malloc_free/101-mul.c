@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stddef.h>
 /**
  * mul - multiplies two numbers
  * @num: array of two integers
@@ -9,6 +11,7 @@ void print_digit(int num);
 int is_digit(int *num);
 int Number_of_arguments(int *num);
 int mul(int *num);
+char _putchar(char c);
 
 int mul(int *num)
 {
@@ -17,7 +20,7 @@ int mul(int *num)
 	n = Number_of_arguments(num);
 	d = is_digit(num);
 
-	if (n != 2 || d != 0 || num[0] == NULL || num[1] == NULL)
+	if (n != 2 || d != 0 || num == NULL)
 	{
 		print_string("Error\n");
 		exit(98);
@@ -44,11 +47,11 @@ void print_string(char *s)
  * print_digit - prints input digit
  * @num: input integer
  */
-void print_digit(int *num)
+void print_digit(int num)
 {
 	int n, th, hun, tens, rem;
 
-	n = *num;
+	n = num;
 	th = n / 1000;
 	if (th == 0)
 	{
