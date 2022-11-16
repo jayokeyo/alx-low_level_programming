@@ -8,11 +8,11 @@
  * @owner: name of dog's owner
  * Description: The struct has three items; name, age, and owner
  */
-struct dog {
+typedef struct dog dog_t
+{
 	char name;
 	float age;
 	char owner;
 };
-typedef struct dog dog_t;
 
 #endif /*DOG_H*/
