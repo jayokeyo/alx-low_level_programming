@@ -7,7 +7,7 @@
  * @owner: name of dog's owner
  * Description: The struct has three items; name, age, and owner
  */
-typedef struct dog dog_t
+struct dog
 {
 	char *name;
 	float age;
