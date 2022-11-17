@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stddef.h>
-#include "calc.h"
+#include <stdlib.h>
+#include "3-calc.h"
 /**
  * get_op_func - evaluates the right function to use
  * @s: operator passed by user
@@ -9,7 +10,7 @@
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
-		{"+", op+add},
+		{"+", op_add},
 		{"*", op_sub},
 		{"*", op_mul},
 		{"/", op_div},
@@ -22,10 +23,10 @@ int (*get_op_func(char *s))(int, int)
 
 	do
 	{
-		if (*s == *ops[i].op)
-			return (*ops[i].f);
+		if (*s == *(ops[i].op))
+			return (ops[i].f);
 		i++;
 	}
-	while (ops[i]);
+	while (ops[i].op);
 	return (NULL);
 }
