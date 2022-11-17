@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "main.h"
+#include "function_pointers.h"
 /**
  * print_name - prints a anme based on the passed function
  * @name: name to be printed
