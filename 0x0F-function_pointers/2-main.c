@@ -14,7 +14,7 @@ int is_98(int elem)
  * @elem: number to be checked
  * Return: 0 if false otherwise non zero number
  */
-int is_strictly_positive(elem)
+int is_strictly_positive(int elem)
 {
 	return (elem > 0);
 }
