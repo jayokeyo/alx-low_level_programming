@@ -6,6 +6,6 @@
  */
 int main(void)
 {
-	print_numbers(",",3,1,2,3);
+	print_numbers(",",5,3,"K",2,"T",-8);
 	return (0);
 }
