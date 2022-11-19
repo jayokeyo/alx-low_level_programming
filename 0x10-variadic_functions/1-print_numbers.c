@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stddef.h>
 #include "variadic_functions.h"
 /**
  * print_numbers - prints n numbers separated by separator
