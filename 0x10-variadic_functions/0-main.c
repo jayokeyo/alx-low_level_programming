@@ -6,6 +6,6 @@
  */
 int main(void)
 {
-	print_numbers(",",5,3,"K",2,"T",-8);
+	print_strings(" ",5,"Love","is","the","most stupid thing","on earth");
 	return (0);
 }
