@@ -1,6 +1,6 @@
 #include <stddef.h>
 #include "lists.h"
-#include <stdio.h>
+
 /**
  * print - prints a string
  * @str: string to be printed
@@ -22,6 +22,7 @@ void print_int(int len)
 	int num, k = 1, div = 10;
 	
 	num = len;
+
 	while (div >= 10)
 	{
 		k *= 10;
