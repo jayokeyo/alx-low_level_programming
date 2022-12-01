@@ -1,5 +1,4 @@
-#include "main.h"
-#include <stddef.h>
+#include "lists.h"
 /**
  * free_listint - frees memory allocated to linked list
  * @head: head of linked list
