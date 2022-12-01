@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stddef.h>
 /**
  * add_nodeint - adds a node to a singly linked list
  * @head: current head of the singly linked list
@@ -13,8 +14,8 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	if (new == NULL)
 		return (NULL);
 	new->n = n;
-	new->next = head;
-	head = new;
+	new->next = *head;
+	*head = new;
 
-	return (head);
+	return (*head);
 }
