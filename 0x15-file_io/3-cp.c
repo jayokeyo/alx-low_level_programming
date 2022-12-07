@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	}
 	fd1 = open(argv[1], O_RDONLY);
 	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_RDWR, 0664);
-	rd = read(fd1, buf, len);
+	rd = read(fd1, buf, 1024);
 	if (fd1 == -1 || rd == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
