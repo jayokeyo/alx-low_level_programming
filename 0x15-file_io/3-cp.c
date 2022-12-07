@@ -5,6 +5,7 @@
  * main - copies content of a file to another file
  * @argc: number of arguments
  * @argv: argument vector
+ * Return: Always 0
  */
 int main(int argc, char *argv[])
 {
