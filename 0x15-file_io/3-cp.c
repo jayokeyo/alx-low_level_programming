@@ -17,22 +17,37 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	fd1 = open(argv[1], O_RDONLY);
+	if (fd1 == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
 	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_RDWR, 0664);
+	if (fd2 == -1)
+	{
+		dprintf(2, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
+	}
 	rd = read(fd1, buf, 1024);
+	if (rd == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
 	while (rd != 0)
 	{
-		if (fd1 == -1 || rd = -1)
-		{
-			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
-			exit(98);
-		}
 		wr = write(fd2, buf, rd);
-		if (fd2 == -1 || wr == -1)
+		if (wr == -1)
 		{
 			dprintf(2, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 		rd = read(fd1, buf, 1024);
+		if (rd == -1)
+		{
+			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
 	}
 	cl1 = close(fd1);
 	cl2 = close(fd2);
