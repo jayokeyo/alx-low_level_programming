@@ -1,13 +1,14 @@
+#include "main.h"
 /**
  * read_textfile - reads the content of a tex file and prints it on stdout
  * @filename: file to be read
  * @letters: number of characters to be read
  * Return: number of characters successfully read
  */
-size_t read_textfile(const char *filename, size_t letters)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	char *buf[letters];
+	char buf[1024];
 
 	if (filename == NULL)
 		return (0);
