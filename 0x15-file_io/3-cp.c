@@ -1,10 +1,12 @@
 #include "main.h"
+#include <string.h>
+#include <stdio.h>
 /**
  * copy - copies content of a file to another file
  * @argc: number of arguments
  * @argv: argument vector
  */
-void copy(int argc, char argv[])
+void copy(int argc, char *argv[])
 {
 	int fd1, fd2, len, rd, wr, cl1, cl2;
 	char buf[1024];
