@@ -6,7 +6,7 @@
  * @argc: number of arguments
  * @argv: argument vector
  */
-void copy(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int fd1, fd2, len, rd, wr, cl1, cl2;
 	char buf[1024];
@@ -43,4 +43,5 @@ void copy(int argc, char *argv[])
 		dprintf(2, "Error: Can't close fd %d\n", fd2);
 		exit(100);
 	}
+	return (0);
 }
