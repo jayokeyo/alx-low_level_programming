@@ -20,12 +20,16 @@ int main(int argc, char *argv[])
 	fd1 = open(argv[1], O_RDONLY);
 	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_RDWR, 0664);
 	rd = read(fd1, buf, 1024);
-	if (fd1 == -1 || rd == -1)
+	while (rd != 0)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
+		if (fd1 == -1 || rd == -1)
+		{
+			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
+		wr = write(fd2, buf, rd);
+		rd = read(fd1, buf, 1024);
 	}
-	wr = write(fd2, buf, rd);
 	if (fd2 == -1 || wr == -1)
 	{
 		dprintf(2, "Error: Can't write to %s\n", argv[2]);
