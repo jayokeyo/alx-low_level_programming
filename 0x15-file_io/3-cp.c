@@ -18,8 +18,8 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	fd1 = open(argv[1], O_RDONLY);
-	if (fd1 <= 0)
-		return (0);
+	/*if (fd1 <= 0)
+		return (0);*/
 	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_RDWR, 0664);
 	rd = read(fd1, buf, 1024);
 	while (rd != 0)
