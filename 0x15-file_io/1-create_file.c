@@ -16,7 +16,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	if (text_content == NULL)
 		text_content = emp;
-	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC);
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC);
 	if (fd == -1)
 		return (-1);
 	wr = write(fd, text_content, len);
