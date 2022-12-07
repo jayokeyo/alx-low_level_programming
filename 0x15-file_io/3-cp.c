@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	while (rd != 0)
+	while (rd > 0)
 	{
 		wr = write(fd2, buf, rd);
 		rd = read(fd1, buf, 1024);
