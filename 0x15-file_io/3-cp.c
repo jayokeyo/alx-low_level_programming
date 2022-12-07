@@ -31,16 +31,16 @@ void copy(int argc, char *argv[])
 		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	cl1 = close(argv[1]);
-	cl2 = close(argv[2]);
+	cl1 = close(fd1);
+	cl2 = close(fd2);
 	if (cl1 == -1)
 	{
-		dprintf(2, "Error: Can't close fd %s\n", fd1);
+		dprintf(2, "Error: Can't close fd %d\n", fd1);
 		exit(100);
 	}
 	if (cl2 == -1)
 	{
-		dprintf(2, "Error: Can't close fd %s\n", fd2);
+		dprintf(2, "Error: Can't close fd %d\n", fd2);
 		exit(100);
 	}
 }
