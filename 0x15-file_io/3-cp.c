@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int fd1, fd2, len, rd, wr, cl1, cl2;
+	int fd1, fd2, rd, wr, cl1, cl2;
 	char buf[1024];
 
 	if (argc != 3)
@@ -16,7 +16,6 @@ int main(int argc, char *argv[])
 		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	len = strlen(argv[1]);
 	fd1 = open(argv[1], O_RDONLY);
 	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_RDWR, 0664);
 	rd = read(fd1, buf, len);
@@ -25,7 +24,7 @@ int main(int argc, char *argv[])
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	wr = write(fd2, buf, len);
+	wr = write(fd2, buf, 1024);
 	if (fd2 == -1 || wr == -1)
 	{
 		dprintf(2, "Error: Can't write to %s\n", argv[2]);
