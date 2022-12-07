@@ -18,8 +18,6 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	fd1 = open(argv[1], O_RDONLY);
-	if (fd1 = 0)
-		return (0);
 	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_RDWR, 0664);
 	rd = read(fd1, buf, 1024);
 	while (rd != 0)
@@ -30,12 +28,12 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 		wr = write(fd2, buf, rd);
+		if (fd2 == -1 || wr == -1)
+		{
+			dprintf(2, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
 		rd = read(fd1, buf, 1024);
-	}
-	if (fd2 == -1 || wr == -1)
-	{
-		dprintf(2, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
 	}
 	cl1 = close(fd1);
 	cl2 = close(fd2);
