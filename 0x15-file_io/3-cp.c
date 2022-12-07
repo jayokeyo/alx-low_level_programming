@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 	fd1 = open(argv[1], O_RDONLY);
 	if (fd1 == -1)
 		Read_Error(argv[1]);
-	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_RDWR, 0664);
+	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (fd2 == -1)
 		Write_Error(argv[2]);
 	rd = read(fd1, buf, 1024);
