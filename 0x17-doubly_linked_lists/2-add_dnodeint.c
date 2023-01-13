@@ -3,6 +3,7 @@
  * add_dnodeint - adds a new node at the beginning of a doubly linked list
  * @head: head
  * @n: data
+ * Return: Pointer to new node
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
