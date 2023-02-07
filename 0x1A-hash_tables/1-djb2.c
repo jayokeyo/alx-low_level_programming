@@ -4,7 +4,7 @@
  * @str: string input
  * Return: hash value
  */
-unsigned long hash(unsigned char *str)
+unsigned long hash_djb2(const unsigned char *str)
 {
 	unsigned long hash = 5381;
 	int c;
