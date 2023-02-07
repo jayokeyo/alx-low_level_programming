@@ -10,7 +10,7 @@ unsigned long hash(unsigned char *str)
 	int c;
 	
 	/* hash * 33 + c */
-	while (c = *str++)
+	while ((c = *str++))
 		hash = ((hash << 5) + hash) + c;
 	return hash;
 }
