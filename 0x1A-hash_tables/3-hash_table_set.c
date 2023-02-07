@@ -35,8 +35,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[Index] = new;
 	else
 	{
-		if (strcmp(ht->array[Index]->key, key) == 0)
-			strcpy(ht->array[Index]->value, value);
+		for (i = index; ht->array[i]; i++)
+		{
+			if (strcmp(ht->array[i]->key, key) == 0)
+			{
+				ht->array[i]->value = value;
+			}
+		}
 	}
 	return (1);
 }
